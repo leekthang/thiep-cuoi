@@ -40,7 +40,7 @@ body {
 
 .hero-img-container {
     width: 100%;
-    height: 560px; /* Tăng nhẹ chiều cao tạo độ thoáng cho ảnh */
+    height: 560px;
     position: relative;
 }
 
@@ -64,38 +64,24 @@ body {
 /* Khung tên nghệ thuật dạng kính mờ (Glow Glassmorphism) */
 .hero-names-box-modern {
     position: absolute;
-
     top: 17px;
     right: 12px;
-
     width: 120px;
-
     background: rgba(255,255,255,0.72);
-
     padding: 8px 6px;
-
     border-radius: 14px;
-
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.08);
-
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     text-align: center;
-
     z-index: 5;
 }
 
 .wedding-badge {
     font-size: 0.45rem;
-
     letter-spacing: 1.5px;
-
     color: #888;
-
     margin-bottom: 3px;
-
     display: block;
 }
 
@@ -108,13 +94,9 @@ body {
 
 .script-font-premium {
     font-family: 'Great Vibes', cursive;
-
     font-size: 1.2rem;
-
     color: #6e1618;
-
     line-height: 1;
-
     margin: 0;
 }
 
@@ -137,11 +119,8 @@ body {
 
 .pulse-heart {
     color: #cc2b33;
-
     font-size: 0.55rem;
-
     margin: 0 5px;
-
     animation: heartBeatCustom 1.5s infinite;
 }
 
@@ -221,149 +200,72 @@ body {
    3. GIA ĐÌNH HAI BÊN
    ========================================== */
 .family-title-top {
-
     font-family: 'Great Vibes', cursive;
-
     font-size: 2.5rem;
-
     color: #6e1618;
-
     margin-bottom: 25px;
-
     position: relative;
 }
 
 .family-title-top::after {
-
     content: "";
-
     width: 80px;
     height: 2px;
-
-    background:
-        linear-gradient(
-            to right,
-            transparent,
-            #6e1618,
-            transparent
-        );
-
+    background: linear-gradient(to right, transparent, #6e1618, transparent);
     display: block;
-
     margin: 8px auto 0 auto;
 }
 
-/* =========================
-   FAMILY PREMIUM
-========================= */
-
 .family-card-wrap {
-
     display: flex;
     flex-direction: column;
     gap: 18px;
-
     margin-top: 10px;
 }
 
 .family-box {
-
     background: #fff;
-
     border-radius: 18px;
-
     padding: 18px 18px;
-
     position: relative;
-
-    box-shadow:
-        0 8px 24px rgba(110,22,24,0.06);
-
-    border:
-        1px solid rgba(110,22,24,0.08);
-
+    box-shadow: 0 8px 24px rgba(110,22,24,0.06);
+    border: 1px solid rgba(110,22,24,0.08);
     overflow: hidden;
 }
 
-/* line decor */
-
 .family-box::before {
-
     content: "";
-
     position: absolute;
-
     left: 0;
     top: 18px;
-
     width: 4px;
     height: 70px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            #6e1618,
-            #c94750
-        );
-
+    background: linear-gradient(to bottom, #6e1618, #c94750);
     border-radius: 20px;
 }
 
 .family-side-title {
-
     font-size: 1.05rem;
-
     font-weight: 800;
-
     color: #6e1618;
-
     margin-bottom: 10px;
-
     padding-left: 10px;
-
     letter-spacing: 1px;
 }
 
 .parent-name {
-
     font-size: 0.92rem;
-
     margin-bottom: 5px;
-
     color: #333;
-
     padding-left: 10px;
 }
 
 .address-text {
-
     font-size: 0.82rem;
-
     color: #777;
-
     line-height: 1.5;
-
     padding-left: 10px;
-
     margin-top: 8px;
-}
-
-.family-side-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 4px;
-}
-
-.parent-name {
-    font-size: 0.85rem;
-    margin-bottom: 2px;
-    color: #333;
-}
-
-.address-text {
-    font-size: 0.8rem;
-    color: #777;
 }
 
 .announcement {
@@ -374,9 +276,10 @@ body {
 }
 
 .couple-name-accent {
-    font-weight: 500;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
     color: #6e1618;
-    font-size: 1.35rem;
+    margin-bottom: 0;
 }
 
 .and-text {
@@ -387,9 +290,11 @@ body {
 }
 
 .sub-invite-text {
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: 0.82rem;
+    line-height: 1.7;
     letter-spacing: 1px;
+    color: #555;
+    font-weight: 600;
 }
 
 /* ==========================================
@@ -541,49 +446,7 @@ body {
 }
 
 /* ==========================================
-   5. LỊCH BIỂU
-   ========================================== */
-.calendar-header-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
-    color: #6e1618;
-}
-
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    row-gap: 12px;
-    font-size: 0.85rem;
-}
-
-.day-name {
-    font-weight: 600;
-    color: #888;
-}
-
-.day-num {
-    color: #444;
-    position: relative;
-    padding: 4px 0;
-}
-
-.special-wedding-day {
-    color: white;
-    font-weight: 700;
-    z-index: 1;
-}
-
-.heart-pop {
-    position: absolute;
-    font-size: 1.5rem;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* ==========================================
-   6. HỘP QUÀ MỪNG CƯỚI
+   5. HỘP QUÀ MỪNG CƯỚI
    ========================================== */
 .gift-section {
     border-top: 1px rgba(110, 22, 24, 0.1) solid;
@@ -693,7 +556,7 @@ body {
 .right-heart { bottom: 25%; right: 10%; }
 
 /* ==========================================
-   7. ALBUM HÌNH CHỌN
+   6. ALBUM HÌNH CHỌN
    ========================================== */
 .album-text-title {
     display: flex;
@@ -767,26 +630,8 @@ body {
     border-color: #ffffff;
 }
 
-/* Nút nổi menu góc phải */
-.floating-menu {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
-    background-color: #ff5263;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 99;
-}
-
 /* ==========================================
-   8. HIỆU ỨNG CHUYỂN ĐỘNG (ANIMATIONS)
+   7. HIỆU ỨNG CHUYỂN ĐỘNG (CORE ANIMATIONS)
    ========================================== */
 @keyframes heartBeatCustom {
     0% { transform: scale(1); }
@@ -799,7 +644,7 @@ body {
 @keyframes fadeInUpCustom {
     from {
         opacity: 0;
-        transform: translate3d(0, 30px, 0);
+        transform: translate3d(0, 40px, 0);
     }
     to {
         opacity: 1;
@@ -958,9 +803,7 @@ body {
 
 /* ALBUM */
 #mainAlbumPreview {
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 /* SCROLLBAR HIDE */
@@ -972,7 +815,7 @@ body {
     scrollbar-width: none;
 }
 
-/* PERFORMANCE */
+/* PERFORMANCE & OPTIMIZATION */
 .animate-pulse-gift,
 .animate-bounce,
 .animate-float,
@@ -980,120 +823,94 @@ body {
     will-change: transform;
 }
 
-/* MAP BUTTON */
 .btn-map-custom:active {
     transform: scale(0.96);
 }
 
-
-/* =========================
-   COUPLE LOVE SECTION
-========================= */
-
 .couple-love-section {
-
     padding: 10px 0 0 0;
 }
 
 .couple-name-wrap {
-
     margin-top: 12px;
 }
 
-.couple-name-accent {
-
-    font-family: 'Great Vibes', cursive;
-
-    font-size: 2.5rem;
-
-    color: #6e1618;
-
-    margin-bottom: 0;
-}
-
-/* divider */
-
+/* Divider */
 .love-divider {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 12px;
-
     margin: 10px 0;
 }
 
 .love-divider span {
-
     width: 60px;
     height: 1px;
-
-    background:
-        linear-gradient(
-            to right,
-            transparent,
-            rgba(110,22,24,0.5),
-            transparent
-        );
+    background: linear-gradient(to right, transparent, rgba(110,22,24,0.5), transparent);
 }
 
 .love-divider i {
-
     color: #d84b57;
-
     font-size: 0.8rem;
-
     animation: heartBeatCustom 1.5s infinite;
 }
 
-/* IMAGE */
-
+/* Image Frame */
 .couple-image-frame {
-
     position: relative;
-
     border-radius: 24px;
-
     overflow: hidden;
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,0.08);
-
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     padding: 6px;
-
     background: white;
 }
 
 .couple-image-custom {
-
     border-radius: 18px;
-
     width: 100%;
-
     object-fit: cover;
-
     transition: 0.4s ease;
 }
 
 .couple-image-custom:hover {
-
     transform: scale(1.02);
 }
 
-/* text */
 
-.sub-invite-text {
+/* ==========================================
+   8. HỆ THỐNG HIỆU ỨNG CUỘN TRANG MỚI (ON-SCROLL ANIMATIONS)
+   ========================================== */
 
-    font-size: 0.82rem;
+/* Trạng thái ẩn ban đầu */
+.scroll-animate {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
 
-    line-height: 1.7;
+/* Hiệu ứng 1: Hiện hình + Trượt từ dưới lên */
+.scroll-animate[data-animate="fade-up"] {
+    transform: translate3d(0, 40px, 0);
+}
 
-    letter-spacing: 1px;
+/* Hiệu ứng 2: Trượt từ trái qua */
+.scroll-animate[data-animate="slide-left"] {
+    transform: translate3d(-50px, 0, 0);
+}
 
-    color: #555;
+/* Hiệu ứng 3: Trượt từ phải qua */
+.scroll-animate[data-animate="slide-right"] {
+    transform: translate3d(50px, 0, 0);
+}
 
-    font-weight: 600;
+/* Hiệu ứng 4: Thu phóng hiện dần */
+.scroll-animate[data-animate="zoom-in"] {
+    transform: scale3d(0.9, 0.9, 1);
+}
+
+/* Trạng thái KÍCH HOẠT khi người dùng cuộn đến */
+.scroll-animate.animated {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
 }
