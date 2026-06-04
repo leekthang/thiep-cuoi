@@ -166,14 +166,13 @@ function preloadImages() {
 // ==========================================
 function createHeartShower() {
   const heartContainer = document.createElement("div");
-  heartContainer.id = "wedding-heart-shower";
 
   Object.assign(heartContainer.style, {
     position: "fixed",
     top: "0",
     left: "0",
     width: "100%",
-    height: "100vh",
+    height: "100%",
     overflow: "hidden",
     pointerEvents: "none",
     zIndex: "9999",
@@ -184,92 +183,67 @@ function createHeartShower() {
   const styleSheet = document.createElement("style");
 
   styleSheet.innerHTML = `
-  
-  @keyframes heartFall {
-    0% {
-      transform: translateY(-50px) rotate(0deg) scale(0.6);
-      opacity: 0;
-    }
 
-    10% {
-      opacity: 0.9;
-    }
+@keyframes heartFall {
+from {
+transform: translate3d(0,-60px,0);
+opacity: 0;
+}
 
-    100% {
-      transform: translateY(110vh) rotate(360deg) scale(1);
-      opacity: 0;
-    }
-  }
+15% {
+  opacity: .9;
+}
 
-  @keyframes heartSway {
-    0% {
-      margin-left: 0px;
-    }
+to {
+  transform: translate3d(0,110vh,0);
+  opacity: 0;
+}
 
-    25% {
-      margin-left: 12px;
-    }
+}
 
-    50% {
-      margin-left: -12px;
-    }
+.falling-heart {
+position: absolute;
+user-select: none;
+pointer-events: none;
+will-change: transform, opacity;
+backface-visibility: hidden;
+transform: translateZ(0);
+}
 
-    75% {
-      margin-left: 8px;
-    }
-
-    100% {
-      margin-left: 0px;
-    }
-  }
-
-  .falling-heart{
-      position:absolute;
-      user-select:none;
-      pointer-events:none;
-      line-height:1;
-      will-change:transform;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
-  }
-
-  `;
+`;
 
   document.head.appendChild(styleSheet);
 
-  const heartIcons = ["❤️", "💖", "💕", "💗", "💘", "💞"];
+  const heartIcons = ["💖", "💕", "💗"];
 
   function spawnHeart() {
     if (document.hidden) return;
 
-    const heart = document.createElement("div");
+    const heart = document.createElement("span");
 
     heart.className = "falling-heart";
 
-    heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+    heart.textContent =
+      heartIcons[Math.floor(Math.random() * heartIcons.length)];
 
-    const size = Math.random() * 18 + 14;
-    const left = Math.random() * 100;
-    const duration = Math.random() * 5 + 7;
+    const size = Math.random() * 10 + 14;
+    const duration = Math.random() * 3 + 6;
 
-    heart.style.left = left + "%";
+    heart.style.left = Math.random() * 100 + "%";
     heart.style.top = "-40px";
     heart.style.fontSize = size + "px";
 
-    heart.style.animation = `
-      heartFall ${duration}s linear forwards,
-      heartSway ${Math.random() * 2 + 3}s ease-in-out infinite
-    `;
+    heart.style.animation = `heartFall ${duration}s linear forwards`;
 
     heartContainer.appendChild(heart);
 
-    setTimeout(() => {
+    heart.addEventListener("animationend", () => {
       heart.remove();
-    }, duration * 1000);
+    });
   }
 
-  setInterval(() => {
-    spawnHeart();
-  }, 350);
+  // Tạo tim thưa hơn để Facebook và iPhone chạy mượt
+  setInterval(spawnHeart, 1000);
 }
 // ===============================
 // INIT ALL FUNCTIONS
